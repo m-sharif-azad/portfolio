@@ -68,7 +68,7 @@ body { font-family: Arial, sans-serif; scroll-behavior: smooth; background: #f4f
 .fade-in.show { opacity:1; transform:translateY(0); }
 
 /* FOOTER */
-.site-footer { background:#f0f8ff; color:white; padding:40px 20px; }
+.site-footer { background:#cdd2db; color:white; padding:40px 20px; }
 .footer-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; max-width:1200px; margin:auto; }
 .footer-col { flex:1 1 200px; min-width:200px; }
 .footer-col h3 { margin-bottom:15px; color:#0d6efd; }
@@ -78,6 +78,29 @@ body { font-family: Arial, sans-serif; scroll-behavior: smooth; background: #f4f
 .footer-col ul li { margin:8px 0; }
 .social-icons a { display:inline-block; margin-right:10px; color:#ccc; }
 .footer-bottom { text-align:center; padding-top:20px; border-top:1px solid #333; margin-top:30px; font-size:13px; color:#bbb; }
+
+
+/* Media headings */
+.media h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+/* Academic gallery */
+.academic-gallery img {
+  width: 180px;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.academic-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
 
 /* RESPONSIVE */
 @media(max-width:768px){ .footer-container{flex-direction:column; align-items:center;} .footer-col{text-align:center;} }
