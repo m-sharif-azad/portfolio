@@ -16,7 +16,7 @@ body{
 
 nav{
   position:fixed;top:0;width:100%;
-  padding:15px 8%;
+  padding:18px 5%;
   display:flex;
   justify-content:space-between;
   background:rgba(255,255,255,0.8);
@@ -183,10 +183,6 @@ footer{
 }
 
 
-.hero{
-  background: linear-gradient(135deg,#e0f7ff,#f5fbff);
-  padding:120px 10% 80px;
-}
 
 
 .hero-container{
@@ -229,19 +225,29 @@ footer{
   padding-left:28px;
   margin-bottom:12px;
   font-size:0.95rem;
+color:#00bfff;
 }
 
 .hero-services li::before{
   content:"✔";
   position:absolute;
-  left:0;
-  color:#00bfff;
+  left:22%;
+  color:red;
   font-weight:bold;
 }
 
 .hero-buttons{
-  margin-top:25px;
+  margin-top:25px;  
 }
+
+.hero-btn{
+  text-align:center;
+ background:rgba(0,191,255,0.18);
+  padding:22px;
+  border-radius:50%;
+  
+}
+
 
 .btn-outline{
   background:transparent;
