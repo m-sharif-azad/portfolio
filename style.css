@@ -73,6 +73,7 @@ section{
 .btn:hover{transform:scale(1.05); background:#00e5ff;}
 
 .grid{
+  text-align:center;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
