@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Sharif Azad | PhD Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #2c7be5;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Header */
+    header {
+      padding: 100px 20px 60px;
+      text-align: center;
+      background: #2c7be5;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    header a {
+      color: white;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      color: #2c7be5;
+      border-bottom: 2px solid #2c7be5;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-intro {
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    /* Cards */
+    .card {
+      background: #ffffff;
+      border-left: 4px solid #2c7be5;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,255,255,0.15);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2c7be5;
+      display: inline;
+    }
+    .card ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+    a {
+      color: #2c7be5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Collapsible */
+    .collapsible-card .card-content {
+      display: none;
+      padding-top: 10px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .toggle-btn {
+      background: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      width: 28px;
+      height: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c7be5;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+
+/* Hero section layout */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+  flex-wrap: wrap;
+  background: #f8f9fa;
+}
+
+.hero-left {
+  flex: 1 1 500px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #2c7be5;
+}
+
+.hero-left h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #333;
+}
+
+.hero-left p {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.hero-left a {
+  color: #2c7be5;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 500;
+}
+.hero-left a:hover {
+  text-decoration: underline;
+}
+
+.hero-right {
+  flex: 0 0 220px;
+  text-align: center;
+}
+
+.hero-right img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2c7be5;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.hero-right img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .hero-right {
+    margin-top: 20px;
+  }
+
+ nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+}
+
+
+
+
+
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#publications">📄 Publications</a>
+    <a href="#applied-projects">⚙️ Projects</a>
+    <a href="#stem-education">🤖 STEM Ed</a>
+    <a href="#certifications">🎓 Certifications</a>
+    <a href="#education">Education</a>
+    <a href="#skills">🎯 Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header 
+  <header>
+    <h1>Md Sharif Azad</h1>
+    <p>AI Researcher | STEM & Early Technology Education | PhD Portfolio</p>
+    <p>
+      <a href="MdSharifAzad_CV.pdf" target="_blank">Download CV</a> | 
+      <a href="https://github.com/m-sharif-azad" target="_blank">GitHub</a> | 
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+    </p>
+  </header> -->
+
+
+
+<header class="hero">
+  <div class="hero-left">
+    <h1>Md Sharif Azad</h1>
+    <h2>Aspiring PhD Researcher • Artificial Intelligence & Intelligent Systems</h2>
+    <p>I am an AI and IoT practitioner with experience in academic mentoring, applied research projects, and technology-focused education. My long-term goal is to pursue doctoral research in AI and intelligent systems.</p>
+    <p>
+      <a href="MdSharifAzad_CV.pdf" target="_blank">Download CV</a> | 
+      <a href="https://github.com/m-sharif-azad" target="_blank">GitHub</a> | 
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+    </p>
+  </div>
+  <div class="hero-right">
+    <img src="sharif.png" alt="Md Sharif Azad">
+  </div>
+</header>
+
+
+
+
+
+
+  <!-- Publications -->
+  <section id="publications">
+    <h2>📄 Academic Consulting & Mentorship</h2>
+    <p class="section-intro">
+      Co-authored papers and consultancy projects demonstrating research contributions in AI and applied deep learning.
+    </p>
+
+
+<div class="card collapsible-card">
+  <div class="card-header">
+    <h3>Master Thesis Guidance: Tomato Disease Prediction Using AI</h3>
+    <button class="toggle-btn">+</button>
+  </div>
+  <div class="card-content">
+    <p><strong>Role:</strong> Academic Consultant / Mentor</p>
+    <p><strong>Contribution:</strong> Guided methodology design, supervised model implementation, and reviewed results.</p>
+    <p><strong>Outcome:</strong> Successfully completed Master’s thesis project.</p>
+    <!-- Optional: Link to your demo code if allowed -->
+    <a href="https://github.com/yourusername/tomato-ai-demo" target="_blank">View Related Project</a>
+  </div>
+</div>
+
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>Deep Learning for Tomato Disease Detection</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <p><strong>Authors:</strong> A. Rahman, M.S. Azad, et al.</p>
+        <p><strong>Role:</strong> Academic Consultant / Co-Author</p>
+        <p><strong>Status:</strong> Under Review</p>
+        <p><strong>Contribution:</strong> Literature review, methodology design, model validation.</p>
+        <a href="https://github.com/yourusername/paper1" target="_blank">View Details</a>
+      </div>
+    </div>
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>Survey on AI Techniques for Crop Disease Prediction</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <p><strong>Authors:</strong> M.S. Azad, B. Kumar</p>
+        <p><strong>Role:</strong> Co-Author</p>
+        <p><strong>Status:</strong> Published, 2025</p>
+        <p><strong>Contribution:</strong> Systematic review and comparison of deep learning approaches.</p>
+        <a href="https://github.com/yourusername/paper2" target="_blank">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applied Projects -->
+  <section id="applied-projects">
+    <h2>⚙️ Academic & Applied Research Projects</h2>
+    <p class="section-intro">
+      Projects translating research into real-world systems and prototypes.
+    </p>
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>AI-Based Tomato Disease Prediction System</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <p><strong>Tools:</strong> Python, TensorFlow, OpenCV</p>
+        <p><strong>Outcome:</strong> Dataset preparation, model training, evaluation, dashboard demo.</p>
+        <p><strong>Research Angle:</strong> Potential journal extension and practical application.</p>
+        <a href="https://github.com/yourusername/tomato-ai" target="_blank">View GitHub</a>
+      </div>
+    </div>
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>Smart Traffic Light System</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <p><strong>Tools:</strong> Arduino, Sensors, Python</p>
+        <p><strong>Outcome:</strong> Real-time traffic optimization prototype.</p>
+        <p><strong>Research Angle:</strong> Applied control system and algorithmic optimization.</p>
+        <a href="https://github.com/yourusername/traffic-light" target="_blank">View GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEM Education -->
+  <section id="stem-education">
+    <h2>🤖 STEM & Early Technology Education</h2>
+    <p class="section-intro">
+      Hands-on projects integrating robotics, block-based AI, and simulations to develop AI literacy and computational thinking.
+    </p>
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>Robotics-Based Learning</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>Line-following and obstacle-avoidance robots</li>
+          <li>Smart traffic light and automation models</li>
+          <li>Sensor-based control systems</li>
+        </ul>
+        <p><strong>Focus:</strong> STEM pedagogy and problem-based learning</p>
+        <a href="https://github.com/yourusername/robotics-projects" target="_blank">View GitHub</a>
+      </div>
+    </div>
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>Block-Based AI Models</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>Image classification (healthy vs diseased plants)</li>
+          <li>Sound and gesture recognition models</li>
+          <li>Data labeling and bias awareness activities</li>
+        </ul>
+        <p><strong>Focus:</strong> AI literacy and supervised learning introduction</p>
+        <a href="https://github.com/yourusername/block-ai-projects" target="_blank">View GitHub</a>
+      </div>
+    </div>
+
+    <div class="card collapsible-card">
+      <div class="card-header">
+        <h3>Simulations & Games</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <div class="card-content">
+        <ul>
+          <li>Traffic flow and smart city simulations</li>
+          <li>Ecosystem balance and environmental models</li>
+          <li>Resource management and decision-making games</li>
+        </ul>
+        <p><strong>Focus:</strong> Experiential learning and systems thinking</p>
+        <a href="https://github.com/yourusername/simulation-projects" target="_blank">View GitHub</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>🎓 Certifications & Training</h2>
+
+
+     <div class="card">
+     <h3>Deep Learning Specialization – Coursera</h3>
+     <p>Completed 2024 | Skills: Neural Networks, CNNs, TensorFlow</p>
+     <a href="https://www.coursera.org/account/accomplishments/somecertificateID" target="_blank">View Certificate</a>
+     </div>
+
+
+    <div class="card">
+      <h3>Deep Learning Specialization – Coursera</h3>
+      <p>Completed 2024 | Skills: Neural Networks, CNNs, TensorFlow</p>
+    </div>
+
+    <div class="card">
+      <h3>AI for Everyone – Coursera</h3>
+      <p>Completed 2023 | Skills: AI literacy, applied ML concepts</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>Master of Science (MSc) in Artificial Intelligence</h3>
+      <p>University of XYZ, Bangladesh</p>
+      <p>Department: Computer Science & Engineering | Year: 2023</p>
+      <p>Thesis: "Tomato Disease Prediction Using Deep Learning"</p>
+    </div>
+
+    <div class="card">
+      <h3>Bachelor of Science (BSc) in Computer Science & Engineering</h3>
+      <p>University of ABC, Bangladesh</p>
+      <p>Department: Computer Science & Engineering | Year: 2019</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>🎯 Technical Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Programming: Python, C, C++</li>
+        <li>Frameworks: TensorFlow, PyTorch, OpenCV</li>
+        <li>Tools: Arduino, Raspberry Pi, Git, GitHub</li>
+        <li>Other: Robotics kits, Scratch, Code.org, Simulation software</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sharifazad@email.com">sharifazad@email.com</a></p>
+    <p>
+      <a href="https://github.com/m-sharif-azad" target="_blank">GitHub</a> | 
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a> | 
+      <a href="MdSharifAzad_CV.pdf" target="_blank">Download CV</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Md Sharif Azad</p>
+  </footer>
+
+  <script>
+    // Collapsible cards script
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.parentElement.nextElementSibling;
+        const isOpen = content.style.display === "block";
+        content.style.display = isOpen ? "none" : "block";
+        btn.textContent = isOpen ? "+" : "−";
+      });
+    });
+  </script>
+
+</body>
+</html>
